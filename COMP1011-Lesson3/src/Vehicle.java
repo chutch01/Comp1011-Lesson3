@@ -10,18 +10,36 @@
  */
 //private variables
 public class Vehicle {
-	private int numWheels = 4;
-	private int numDoors = 2;
-	private String color = "";
-	private String make = "";
-	private String model = "";
-	private String year = "";
-	private float speed = 0;
-	private final int MAX_SPEED = 40;
+	protected int numWheels = 4;
+	protected int numDoors = 2;
+	protected String color = "";
+	protected String make = "";
+	protected String model = "";
+	protected String year = "";
+	protected float speed = 0;
+	protected final int MAX_SPEED = 40;
 	
 //public variables
 	
+	
+//constructors	
+public Vehicle(int wheels, int doors, String color, String make, String model, String year){
+	this.numWheels = wheels;
+	this.numDoors = doors;
+	this.color = color;
+	this.make = make;
+	this.model = model;
+	this.year = year;
+	
+}
 
+public Vehicle(String color, String make, String model, String year){
+	this.color = color;
+	this.make = make;
+	this.model = model;
+	this.year = year;
+	
+}
 //public methods 
 	/**
 	 * @return the numWheels
@@ -72,11 +90,7 @@ public class Vehicle {
 	public float getSpeed() {
 		return this.speed;
 	}
-		
-	
-	public Vehicle(){
-		
-	}
+
 	
 	public void accelerate() {
 		this.speed += 4;
